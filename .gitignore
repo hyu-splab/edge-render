@@ -1,2 +1,4 @@
 cmake-build-debug
 .idea
+gl_server
+*.o
