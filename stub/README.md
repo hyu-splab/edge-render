@@ -1,4 +1,4 @@
-# Edge Render Stub 설치 
+# Edge Render Stub 
 ## Install requirements
     
 ```bash
