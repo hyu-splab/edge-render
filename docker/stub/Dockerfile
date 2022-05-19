@@ -18,10 +18,10 @@ RUN chmod 755 install-zmq.sh
 RUN install-zmq.sh
 
 # Download splab-godot
-git clone https://github.com/youngjinkim0706/remote-gl.git
-cd remote-gl
-git checkout -t origin/percomm
-make gl_server
+RUN git clone https://github.com/youngjinkim0706/remote-gl.git
+RUN cd remote-gl
+RUN git checkout -t origin/percomm
+RUN make gl_server
 
 EXPOSE 12345
 
