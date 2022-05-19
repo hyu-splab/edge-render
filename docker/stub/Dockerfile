@@ -3,7 +3,7 @@ LABEL author="play1490@hanyang.ac.kr"
 LABEL purpose="docker image for E-Render Proxy"
 
 # Insatll Dependencies
-
+ENV DEBIAN_FRONTEND noninteractive
 RUN apt update && apt install libzmq3-dev libboost-all-dev libglfw3-dev make cmake git g++ pkg-config -y
 
 # Copy libglad.so 
