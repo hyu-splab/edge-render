@@ -17,6 +17,12 @@ COPY install-zmq.sh /
 RUN chmod 755 install-zmq.sh
 RUN ./install-zmq.sh
 
+# Install snappy
+WORKDIR /
+COPY install-snappy.sh /
+RUN chmod 755 install-snappy.sh
+RUN ./install-snappy.sh
+
 # Download splab-godot
 WORKDIR /
 RUN git clone https://github.com/youngjinkim0706/remote-gl.git
