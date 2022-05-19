@@ -15,7 +15,7 @@ COPY KHR /usr/local/include
 # Install cppzmq
 COPY install-zmq.sh /
 RUN chmod 755 install-zmq.sh
-RUN install-zmq.sh
+RUN ./install-zmq.sh
 
 # Download splab-godot
 RUN git clone https://github.com/youngjinkim0706/remote-gl.git
