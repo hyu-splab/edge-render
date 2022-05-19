@@ -4,7 +4,7 @@ LABEL purpose="docker image for E-Render Proxy"
 
 # Insatll Dependencies
 
-RUN apt update && apt install libzmq3-dev libglfw3-dev make cmake git g++ pkg-config -y
+RUN apt update && apt install libzmq3-dev libboost-all-dev libglfw3-dev make cmake git g++ pkg-config -y
 
 # Copy libglad.so 
 COPY libglad.so.0.0.0 /usr/local/lib/
@@ -18,9 +18,9 @@ RUN chmod 755 install-zmq.sh
 RUN ./install-zmq.sh
 
 # Download splab-godot
-RUN cd /
+WORKDIR /
 RUN git clone https://github.com/youngjinkim0706/remote-gl.git
-RUN cd remote-gl
+WORKDIR /remote-gl
 RUN git checkout -t origin/percomm
 RUN make gl_server
 
