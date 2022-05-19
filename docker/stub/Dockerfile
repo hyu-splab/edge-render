@@ -4,7 +4,7 @@ LABEL purpose="docker image for E-Render Proxy"
 
 # Insatll Dependencies
 
-RUN apt update && apt install libzmq3-dev libglfw3-dev make cmake git pkg-config -y
+RUN apt update && apt install libzmq3-dev libglfw3-dev make cmake git g++ pkg-config -y
 
 # Copy libglad.so 
 COPY libglad.so.0.0.0 /usr/local/lib/
